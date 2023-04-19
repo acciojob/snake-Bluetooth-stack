@@ -13,7 +13,7 @@ let foodList = [
     // }
 ];
 
-snake.style.top = `${(row-1)*10}px`
+snake.style.top = `${row*10}px`;
 
 function eatFood(){
     let snakeTop = (row-1)*10;
