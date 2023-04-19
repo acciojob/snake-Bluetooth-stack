@@ -1,4 +1,3 @@
-//your code here
 const snake = document.querySelector('#pixel');
 const container = document.querySelector('#gameContainer');
 const score = document.querySelector("#scoreBoard");
@@ -34,6 +33,7 @@ function eatFood(){
     });
     const captureFood = document.getElementById(itemId);
     container.removeChild(captureFood);
+    generateFood();
 }
 
 
@@ -84,7 +84,7 @@ function moveBottom(){
 
 //set interval returns a unique id of itself that can be used later on 
 //clearInterval() function to unregister the setInterval() function
-let intervalId = setInterval(moveRight, 1000);
+let intervalId = setInterval(moveRight, 100);
 
 //clearInterval() is used to stop or clear the setInterval() calls
 // clearInterval(intervalId);
@@ -95,29 +95,29 @@ document.body.addEventListener("keyup", (e)=>{
         clearInterval(intervalId);
     }
     if(e.key==='ArrowRight'){
-        intervalId = setInterval(moveRight, 1000);
+        intervalId = setInterval(moveRight, 100);
     }
     else if(e.key==='ArrowLeft'){
-        intervalId = setInterval(moveLeft, 1000);
+        intervalId = setInterval(moveLeft, 100);
     }
     else if(e.key==='ArrowUp'){
-        intervalId = setInterval(moveTop, 1000);
+        intervalId = setInterval(moveTop, 100);
     }
     else if(e.key==='ArrowDown'){
-        intervalId = setInterval(moveBottom, 1000);
+        intervalId = setInterval(moveBottom, 100);
     }
 })
 
 function generateOffset(){
     let number = parseInt(Math.random()*100);
-    if(number > 40){
+    if(number > 39){
         return parseInt(number/10)*10;
     }
     return number*10;
 }
 
 function generateFood(){
-    for(let i = 1; i<=5; i++){
+    for(let i = 1; i<2; i++){
         const foodItem = document.createElement('div');
         foodItem.className = "food";
         let id = "pixel"+(i+1);
