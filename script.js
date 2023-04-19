@@ -82,7 +82,7 @@ function moveBottom(){
 
 //set interval returns a unique id of itself that can be used later on 
 //clearInterval() function to unregister the setInterval() function
-let intervalId = setInterval(moveRight, 100);
+let intervalId = setInterval(moveRight, 1000);
 
 //clearInterval() is used to stop or clear the setInterval() calls
 // clearInterval(intervalId);
@@ -93,16 +93,16 @@ document.body.addEventListener("keyup", (e)=>{
         clearInterval(intervalId);
     }
     if(e.key==='ArrowRight'){
-        intervalId = setInterval(moveRight, 100);
+        intervalId = setInterval(moveRight, 1000);
     }
     else if(e.key==='ArrowLeft'){
-        intervalId = setInterval(moveLeft, 100);
+        intervalId = setInterval(moveLeft, 1000);
     }
     else if(e.key==='ArrowUp'){
-        intervalId = setInterval(moveTop, 100);
+        intervalId = setInterval(moveTop, 1000);
     }
     else if(e.key==='ArrowDown'){
-        intervalId = setInterval(moveBottom, 100);
+        intervalId = setInterval(moveBottom, 1000);
     }
 })
 
