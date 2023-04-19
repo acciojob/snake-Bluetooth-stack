@@ -134,5 +134,5 @@ function generateFood(){
         container.appendChild(foodItem);
     }
 }
-
-window.addEventListener('load', generateFood);
+generateFood();
+// window.addEventListener('load', generateFood);
