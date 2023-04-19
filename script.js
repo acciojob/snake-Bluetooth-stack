@@ -3,7 +3,7 @@ const snake = document.querySelector('#pixel');
 const container = document.querySelector('#gameContainer');
 const score = document.querySelector("#scoreBoard");
 
-let row = 1, column = 1;
+let row = 20, column = 1;
 
 let foodList = [
     // {
@@ -12,6 +12,8 @@ let foodList = [
     //     id: foodItemId
     // }
 ];
+
+snake.style.top = `${(row-1)*10}px`
 
 function eatFood(){
     let snakeTop = (row-1)*10;
